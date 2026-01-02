@@ -6,8 +6,8 @@ import random
 number = random.randint(1, 100)
 attempt = 1
 print("Welcome to number guessing game!!")
-print(number)
-guess = input("Guess a number between (1-100):")
+guess = int(input("Guess a number between (1-100): "))
+
 while guess != number:
     guess = input("Guess a number between (1-100)")
     if guess != number:
@@ -15,5 +15,9 @@ while guess != number:
             print("Incorrect guess, Low")
         elif guess > number:
             print("Incorrect guess, High")
-    else:
-        print(f"You win the number was {number}")
+    
+    guess = input("Guess a number between (1-100)")
+    attempt += 1
+
+print(f"You win! The number was {number}")
+print(f"It took you {attempt} attempts.")
