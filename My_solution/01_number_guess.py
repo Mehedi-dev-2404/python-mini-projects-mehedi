@@ -18,6 +18,3 @@ while guess != number:
     
     guess = input("Guess a number between (1-100)")
     attempt += 1
-
-print(f"You win! The number was {number}")
-print(f"It took you {attempt} attempts.")
